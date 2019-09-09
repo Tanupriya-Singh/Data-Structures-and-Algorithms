@@ -17,9 +17,17 @@ Pattern for N = 5
  5  6  7  8
 */
 
+#include <iostream>
+using namespace std;
+
+// n - number of rows given
 void printPattern(int n){
+	// Write your code here
+  
   int startValue = 1;
   for(int i = 1; i <= n; i++)
+  {
+      for(int j = startValue; j < startValue+n; j++)
     cout<<j<<" ";
   cout<<endl;
   
@@ -29,11 +37,11 @@ void printPattern(int n){
     if(n % 2 != 0)
       startValue = n*(n-2) + 1;
     else
-      startValue = n*(n-2) + 1;
+      startValue = n*(n-1) + 1;
    }
    else if(i > (n+1)/2)
     startValue = startValue - 2*n;
    else
     startValue = startValue + 2*n;
-   
+  }
 }
