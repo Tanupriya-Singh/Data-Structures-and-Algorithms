@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int numKLenSubstrNoRepeats(string S, int K) {
+        
+        int n = S.size();
+        unordered_set<int> seen;
+        int count = 0;
+        
+        int i = 0, j = 0;
+        for(j = 0; j < n; ++j){
+            
+            while(seen.count(S[j])){
+                seen.erase(S[i]);
+                i += 1;
+            }
+            
+            seen.insert(S[j]);
+            if((j-i+1) >= K) {
+                cout<<i<<" "<<j<<endl;
+                count++;
+            }
+            
+        }
+        return count;
+    }
+};
