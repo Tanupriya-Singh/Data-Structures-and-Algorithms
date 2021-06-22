@@ -1,3 +1,3 @@
-# Programming-Solutions
+# Data Structures and Algorithms
 
-This repository stores my solutions to programming challenges which usually appear in contests or interviews. 
+This repository stores my solutions to programming challenges which usually appear in interviews. 
